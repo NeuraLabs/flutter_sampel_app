@@ -11,8 +11,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$USER_HOME$/dev/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-5.0.14/android" />
-            <option value="$USER_HOME$/dev/flutter/.pub-cache/hosted/pub.dartlang.org/location_permissions-2.0.5/android" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

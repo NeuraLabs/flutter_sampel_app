@@ -30,8 +30,8 @@ public class NeuraHelper {
     private NeuraApiClient mNeuraApiClient;
 
     public NeuraHelper(Context context) {
-        // Replace Place holders with your own Neura APP_ID and Neura APP_SECRET
-        mNeuraApiClient = NeuraApiClient.getClient(context, "us-lab-9y4lqts_luLhi2p5XJbyFcytMChUUu64VSeLxA0", "POlc-b4XrJn7agpimlFfPA5TuE9YLxjBwoM64p1RUNk");
+        // Initiate the Neura SDK connection to the variable you’ve declared above
+        mNeuraApiClient = NeuraApiClient.getClient(context, "[APP_UID]", "[APP_SECRET]");
     }
 
     public NeuraApiClient getClient() {

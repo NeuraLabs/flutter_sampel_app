@@ -9,6 +9,8 @@ import io.flutter.plugin.common.MethodChannel;
 public class MainActivity extends FlutterActivity {
     private static final String authenticateChannel = "com.neura.flutterApp/authenticate";
     private static final String TAG = "";
+
+    //Define a class variable for the NeuraApiManager
     private NeuraHelper mNeuraHelper;
 
 
@@ -16,10 +18,7 @@ public class MainActivity extends FlutterActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //GeneratedPluginRegistrant.registerWith(this);
         mNeuraHelper =  new NeuraHelper(this);
-
-
         new MethodChannel(getFlutterView(), authenticateChannel).setMethodCallHandler(
 
         new MethodChannel.MethodCallHandler(){
@@ -29,8 +28,5 @@ public class MainActivity extends FlutterActivity {
 
             }
         });
-
     }
-
-
 }
