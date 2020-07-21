@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.theneura:android-sdk:5.6.16@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8cf1803963c1b4af3c3825b7f5fbc50f/jetified-android-sdk-5.6.16/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8cf1803963c1b4af3c3825b7f5fbc50f/jetified-android-sdk-5.6.16/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.theneura/android-sdk/5.6.16/8fa76275ab20eb277c77c307421d4386040641b8/android-sdk-5.6.16-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.theneura/android-sdk/5.6.16/71679238f75b9ef8791a690e8ee5682ea4bc3119/android-sdk-5.6.16-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
