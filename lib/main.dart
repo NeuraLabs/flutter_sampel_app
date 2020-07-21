@@ -53,9 +53,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  //Use a MethodChannel with a single platform method that returns neura user id when the user is connected.
+  static const authenticateChannel = const MethodChannel('com.neura.flutterApp/authenticate');
+
   String userStatus = "Not Connected";
 
-  static const authenticateChannel = const MethodChannel('com.neura.flutterApp/authenticate');
+ // invoke a method on the method channel,
+  // specifying the concrete method to call using the String identifier authenticate
 
   Future authenticateToNeura() async {
     String response = "";
@@ -79,14 +84,15 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
 
-
+  //Request Location Permissions in both platforms
   void requestPermission() async {
     PermissionStatus permission = await LocationPermissions().requestPermissions();
     print(permission);
 
   }
 
-
+//contain the user interface that displays the neuraId state in a string,
+// and a buttons for authenticate and request permissions.
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
