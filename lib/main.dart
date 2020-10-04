@@ -56,8 +56,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   //Use a MethodChannel with a single platform method that returns neura user id when the user is connected.
   static const authenticateChannel = const MethodChannel('com.neura.flutterApp/authenticate');
+  static const refreshChannel = const MethodChannel('com.neura.flutterApp/refreshData');
 
   String userStatus = "Not Connected";
+  String tokenStatus = "Not Connected";
 
  // invoke a method on the method channel,
   // specifying the concrete method to call using the String identifier authenticate
@@ -77,6 +79,27 @@ class _MyHomePageState extends State<MyHomePage> {
     } finally {
       setState(() {
         userStatus = response;
+      });
+    }
+
+
+  }
+
+  Future refreshData() async {
+    String response = "";
+
+    try {
+      final String result =  await refreshChannel
+          .invokeMethod('refreshData')
+          .then((result) {
+        response = result;
+      });
+    } on PlatformException catch (e) {
+      response = e.code;
+
+    } finally {
+      setState(() {
+        tokenStatus = response;
       });
     }
 
@@ -133,6 +156,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             FlatButton(child: Text('Authenticate'), onPressed: authenticateToNeura),
             FlatButton(child: Text('Request Location Permission'), onPressed: requestPermission),
+            FlatButton(child: Text('Refresh Data'), onPressed: refreshData),
+            Text(
+              '$tokenStatus',
+              style: Theme.of(context).textTheme.bodyText1,
+            )
           ],
         ),
       ),
